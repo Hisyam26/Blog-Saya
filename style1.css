@@ -1,0 +1,173 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.sidebar{
+	position: fixed;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #bdc3c9;
+	transition: all .5s ease;
+}
+.sidebar header{
+	font-size: 23px;
+	color:white;
+	text-align: center;
+	line-height: 70px;
+	background: black;
+	user-select: none;
+    text-shadow: 10px 10px 10px #042331 ;
+}
+.sidebar ul a{
+	line-height: 65px;
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	color: white;
+	padding-left: 40px;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255,255,255,.1);
+	border-bottom: 1px solid black;
+	transition: .4s;
+}
+.sidebar ul li:hover a{
+	padding-left: 50px;
+}
+.sidebar ul a i{
+	margin-right: 16px;
+}
+#check{
+	display: none;
+}
+
+label #btn, label #cancel{
+	position: absolute;
+	cursor: pointer;
+	background: #042331;
+	border-radius: 3px;
+}
+label #btn{
+	left: 40px;
+	top: 25px;
+	font-size: 35px;
+	color: white;
+    padding: 6px 12px;
+    transition: all .5s ease;
+}
+label #cancel{
+	z-index: 1111;
+	left: -195px;
+	top: 17px;
+	font-size: 30px;
+	color: #0a5275;
+	padding: 4px 9px;
+	transition: all .5s ;
+
+}
+
+#check:checked ~.sidebar{
+	left: 0;
+}
+#check:checked ~label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~label #cancel{
+	left: 195px;
+	opacity: 100;
+}
+section{
+ background: url(bg.jpg) no-repeat;
+ background-position: center;
+ height: 100vh;
+ background-size: cover;
+}
+.Main h1{
+	font-family: verdana;
+	color: white;
+	font-size: 50px; 
+	text-shadow: 10px 10px 10px #042331 ;
+	letter-spacing: 10px;
+}
+.Main{
+	max-width: 1200px;
+	margin: auto;
+
+}
+.Main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.icon{
+	position: absolute;
+	left: 49%;
+	transform: translate(-50%);
+	text-align: center; 	
+}
+.tombol{
+	display: inline-block;
+	width:70px;
+	height: 70px;
+	background: #f1f1f1;
+	margin: 10px;
+	border-radius: 30%;
+	box-sizing: 0 5px 15px -5px #00000070;
+	overflow: hidden;
+	position: relative;
+	color: #2980b9;
+}
+.tombol i{
+	transition: 0.3s linear;
+	font-size: 26px;
+	line-height: 70px;
+}
+.tombol:hover i{
+    transform: scale(0.3);
+	color: #f1f1f1;
+}
+.tombol:before{
+   content:"";
+   position: absolute;
+   width: 150px;
+   height: 120px;
+   left: 110px;
+   top: 150%;
+   transform: rotate(45deg);
+   background: #3498db;
+}
+.tombol:hover::before{
+   height: -10px;
+   left: -10px;
+   animation: aaa 2s 5 ease;
+}
+@keyframes aaa{
+	0%{
+		left: -110%;
+		top: 90%;
+	}
+	50%{
+		left: 10%;
+		top:-30%;
+	}
+	100%{
+		left: -10%;
+		top:-10%;
+	}
+}
+.Kontak{
+   font-family: verdana;
+   letter-spacing: 5px;
+   padding-left: 300px;
+   padding-top: 30px;
+}
